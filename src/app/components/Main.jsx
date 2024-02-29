@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
 import Image from 'next/image'
+
 const Main  = () => {
 
-  const handleClick = useState('');
   return (
-    <div>
-        <Image src='/Main.jpg' width={800} height={600}alt='main' />
-
-        <h1>AWESOME POKÉ, AWESOME PEOPLE</h1>
-        <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg" onClick={onClick} >Order NOW!</button>
-        
+    <div className="hero min-h-screen relative w-full">
+        <Image src="/Main.jpg" layout="fill" objectFit="cover" alt="main" />
+        <div className="flex flex-col items-center justify-center h-full text-white absolute top-0 left-0 right-0 bottom-0">
+            <h1>AWESOME POKÉ, AWESOME PEOPLE</h1>
+            <p className="mb-5">BUILD YOUR OWN BOWL</p>
+      <button className="btn btn-primary">ORDER NOW!</button>
+        </div>
     </div>
   )
 }
